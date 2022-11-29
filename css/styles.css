@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* GLOBALES ########################################*/
+a{
+    text-decoration: none;
+}
+h1{
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+    width: 1100px;
+    margin: 48px auto;
+}
+h2{
+    font-size: 18px;
+    font-weight: 600;
+}
+p{
+    margin: 16px 0;
+}
+
+body{
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #707070;
+}
+
+header{
+    min-height: 250px; /* altura mínima */
+    background: rgb(215,143,183);
+    background: linear-gradient(90deg, rgba(215,143,183,1) 0%, rgba(201,185,241,1) 100%);
+}
+
+    header div{
+        height: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center; /* centra el contenido de la barra de navegación en vertical, pero no afecta al nombre de la página porque eso está contenido dentro de un a */
+        margin: auto;
+        width: 1100px;
+    }
+
+    header a{
+        color: #fff;
+        font-weight: 600;
+    }
+
+    header a img{
+        width: 56px;
+        vertical-align: middle; /* esto es para que el texto de al lado del logo que dice el nombre de la página, quede centrado. No se centra con align-items:center */
+    }
+
+    header nav a{
+        padding: 12px;
+    }
+
+    header section{
+        width: 1100px;
+        margin: auto;
+        display: flex;
+    }
+
+    header section h1{
+        margin: 0 0 24px 0;
+    }
+
+    header section div{
+        width: 630px;
+        color: #fff;
+        justify-content: space-evenly;
+    }
+
+    header section img{
+        margin: 69px 120px 50px 95px;
+    }
+
+    .descarga{
+        border: 1px solid #fff;
+        padding: 16px 56px;
+        border-radius: 36px; /* esto no va más allá de 36px, o sea puedo poner un número más grande pero no habrá diferencia. Sino puedo usar con % (ej: 100% pone un óbalo */
+        margin-top: 48px;
+        font-weight: 300;
+        text-align: center;
+        width: 248px;
+        transition: .3s; /* número expresado en segundos o milisegundos (300ms). Esto es que haya un delay cuando cambia de estado (en este caso el cambio es el .descarga:hover y tambíen se puede poner ahí */
+    }
+
+    .descarga:hover{
+        color: #D596C0;
+        background-color: #fff;
+    }
+
+    .fa-brands{
+        font-size: 20px;
+    }
+
+h1{
+    color: #fff;
+    font-weight: 600;
+    font-size: 32px;
+    width: 1100px;
+    margin: 40px auto; /* el margin-top queda con 40px, y el resto queda en auto */
+}
+
+/* MAIN ##########################################*/
+main{
+    min-height: 450px;
+    width: 1100px;
+    margin: auto;
+}
+
+    #contenido-index{
+        height: 448px;
+        display: flex;
+        align-items: center; /* eje y */
+    }
+
+    #contenido-index img{
+        width: 72px;
+    }
+
+    #contenido-index article{
+        text-align: center; /* alinea el texto en el eje x */
+    }
+
+    #contenido-index article h2{
+        margin: 28px 0;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+/* NUESTRA APP ###############################*/
+#nuestraApp{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+    #nuestraApp h2, #nuestraApp p{
+        display: flex;
+        margin-left: 64px;
+    }
+
+/* FEATURES ###################################### */
+#features{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  /* para que queden 2 filas de 3, respeta los anchos */
+    margin-top: 40px;
+}
+
+    #features article{
+        width: 326px;
+        margin-bottom: 76px;
+    }
+
+    #features article h2 img{
+        vertical-align: middle;
+        margin-right: 12px;
+    }
+
+/* PLANES DE PAGO ############################### */
+#planes{
+    height: 550px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}    
+
+    #planes article{
+        width: 326px;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: 5px 0px 10px #999; /* 5px: arriba a la derecha/ 0px: abajo a la izquierda / 10px: valor de la sombra / #999: color de la sombra */
+        padding-bottom: 48px;
+    }
+
+    #planes h2{
+        margin-top: 32px;
+    }
+
+    #planes div{
+        background-color: #F8F8F8;
+        margin: 20px 0;
+        padding-bottom: 8px;
+    }
+
+    #planes div span{
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    #planes article ul{
+        list-style: none;
+        margin-bottom: 32px;
+    }
+    
+    #planes li{
+        line-height: 32px; /* es el interlineado, tambíen se puede hacer con margin */
+    }
+
+    #planes a{
+        color: #707070;
+        border: solid 1px #707070; /* 6px es el ancho del borde, la curvatura es border-radious */
+        padding: 8px 40px;
+        border-radius: 36px;
+        font-weight: 600;
+    }
+
+    #planes a:hover{
+        color: #fff;
+        background-color: #262626;
+    }
+
+    #destacado div, #destacado a{
+        background: #D596C0;
+        color: #fff;
+        background: linear-gradient(90deg, rgba(215,143,183,1) 0%, rgba(201,185,241,1) 100%);
+        border: rgb(215,143,183) 1px solid;
+    }
+
+    #destacado a:hover{
+        background-color: rgb(215,143,183);
+        background: linear-gradient(90deg, rgba(215,143,183,1) 100%, rgba(201,185,241,1) 0%); /* cambio los porentajes para que el degradado cambie de lugar con el hover. Queda feo, es solo para aprender */
+    }
+
+/* NOSOTROS ############################################ */
+#nosotros{
+    display: flex ;
+    justify-content: space-between;
+    height: 500px;
+    align-items: center;
+    text-align: center;
+}
+
+    #nosotros div img{
+        width: 245px;
+        height: 310px;
+        margin-bottom: 12px;
+    }
+
+    #nosotros div img:hover{
+        width: 275px;
+        height: 340px;
+        transition-duration: 0.3s; /* la imagen se agranda de a poquito y no inmediatamente */
+    }
+    
+/* CONTACTO FORM ######################################## */
+#fondo-contacto{
+    width: 100%; /* para que el main, solo aca y no en todas las páginas, ocupe todo el ancho disponible */
+    background-image: url(imgs/bg-contacto.jpg);
+    background-size: cover; /* para que la imagen se vea toda */
+    padding: 60px 0; /* pongo padding para que el section se separe del header, porque no funciona si pongo margin-top en #fondo-contacto section (hay varias maneras de hacer lo mismo */
+}
+
+    #fondo-contacto section{
+        width: 1000px;
+        margin: auto;
+        background-color: #fff;
+        display: flex;
+        padding: 60px;
+        border-radius: 16px;
+        justify-content: space-between;
+    }   
+
+    #fondo-contacto form{
+        width: 550px;
+    }
+
+    #fondo-contacto input, 
+    #fondo-contacto button, 
+    #fondo-contacto textarea{
+        width: 100%;
+        border-radius: 12px;
+        border:none;
+        padding: 16px;
+        font-weight: 600;
+        font-family: Raleway;
+    }
+    
+    #fondo-contacto input, 
+    #fondo-contacto textarea{
+        background-color: #F4F4F4 ;
+        margin-bottom: 16px;
+        color: #707070;
+    }
+    
+    #fondo-contacto textarea{
+        height: 100px;
+        resize: none;
+    }
+
+    #fondo-contacto button{
+        background-color: #707070;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    #fondo-contacto button:hover{
+        background-color: #444444;
+        transition: 0.3s;
+    }
+
+    #fondo-contacto div{
+        width: 250px;
+        background-color: #F4F4F4;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column; /* invierte el eje */
+        align-items: center;
+        line-height: 1.6;
+    }
+
+    #fondo-contacto div img{
+        width: 72px;
+        /* border: 1px solid #707070;
+        border-radius: 36px;
+        padding: 8px;  ---> eso es un intento por ponerle borde a la imagen desde el css, que no siempre queda bien. En este caso queda mal y es más fácil y mejor editar la imagen por afuera y después insertarla */
+        padding: 8px;
+        margin-top: 12px;
+    }
+
+    #fondo-contacto div a{
+        color: #707070;
+        padding: bottom 16px;
+    }
+    
+
+/* FOOTER ############################################# */
+footer{
+    background-color: #262626;
+}
+
+    footer a img{
+        width: 32px;
+    }
+
+    #contenido-footer{
+        width: 1100px;
+        margin: auto;
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #contenido-footer a{
+        color: #fff;
+        font-weight: 600;
+    }
+
+    #logo-footer img{
+        width: 32px;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+
+    footer div a img{
+        width: 16px;
+    }
+
+    
